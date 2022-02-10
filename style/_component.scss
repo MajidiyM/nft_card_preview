@@ -1,0 +1,149 @@
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+
+    .component {
+        width: 375px;
+        background: $card_bg;
+        padding: 20px;
+        border-radius: 20px;
+
+        .comp_img {
+            padding-bottom: 0;
+            line-height: 0;
+            font-size: 0;
+            border-radius: 10px;
+            position: relative;
+            background-color: $cyan;
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                transition: .5s ease;
+                .active_img {
+                display: none;
+                   width: 50px;
+                }
+            }
+            img {
+                width: 100%;
+                border-radius: 10px;
+                transition: .5s ease;
+                
+            }
+
+            &:hover {
+                img {
+                    opacity: .5;
+                }
+                .overlay {
+                    cursor: pointer;
+                    .active_img {
+                        display: block;
+                        opacity: 1;
+                        width: 55px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        text-align: center;
+                    }
+                }
+            }
+           
+        }
+
+        .comp_title {
+            margin-top: 20px;
+
+            span {
+                font-size: 20px;
+                color: $white;
+                font-weight: 600;
+                &:hover {
+                   color: $cyan;
+                   cursor: pointer
+                }
+            }
+
+            
+        }
+
+        .comp_descr {
+            p {
+                color: $soft_blue;
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+
+        .comp_info {
+            margin-bottom: 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+            .comp_price {
+                display: flex;
+                align-items: center;
+                color: $cyan;
+
+                img {
+                    padding-right: 5px;
+                }
+            }
+
+            .comp_deadline {
+                display: flex;
+                align-items: center;
+                color: $soft_blue;
+
+                img {
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        .comp_profile {
+            display: flex;
+            align-items: center;
+            border-top: 1px solid $line;
+            padding: 10px 0 15px 0;
+
+            .profile_img {
+                padding-right: 20px;
+
+                img {
+                    width: 40px;
+                    border: solid 1px white;
+                    border-radius: 50%;
+                }
+            }
+
+            .profile_name {
+                p {
+                    font-size: 18px;
+                    color: $soft_blue;
+
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+}

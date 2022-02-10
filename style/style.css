@@ -1,0 +1,208 @@
+body {
+  background: #0d192b;
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body footer {
+  margin-bottom: 10px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+body footer .attribution {
+  color: white;
+}
+
+body footer .attribution a {
+  color: white;
+}
+
+@media screen and (max-width: 380px) {
+  body footer {
+    margin: 10px 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.container .component {
+  width: 375px;
+  background: #14253d;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.container .component .comp_img {
+  padding-bottom: 0;
+  line-height: 0;
+  font-size: 0;
+  border-radius: 10px;
+  position: relative;
+  background-color: #00fff7;
+}
+
+.container .component .comp_img .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.container .component .comp_img .overlay .active_img {
+  display: none;
+  width: 50px;
+}
+
+.container .component .comp_img img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.container .component .comp_img:hover img {
+  opacity: .5;
+}
+
+.container .component .comp_img:hover .overlay {
+  cursor: pointer;
+}
+
+.container .component .comp_img:hover .overlay .active_img {
+  display: block;
+  opacity: 1;
+  width: 55px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container .component .comp_title {
+  margin-top: 20px;
+}
+
+.container .component .comp_title span {
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+.container .component .comp_title span:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.container .component .comp_descr p {
+  color: #8bacda;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.container .component .comp_info {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .component .comp_info .comp_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #00fff7;
+}
+
+.container .component .comp_info .comp_price img {
+  padding-right: 5px;
+}
+
+.container .component .comp_info .comp_deadline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #8bacda;
+}
+
+.container .component .comp_info .comp_deadline img {
+  padding-right: 5px;
+}
+
+.container .component .comp_profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #2f415b;
+  padding: 10px 0 15px 0;
+}
+
+.container .component .comp_profile .profile_img {
+  padding-right: 20px;
+}
+
+.container .component .comp_profile .profile_img img {
+  width: 40px;
+  border: solid 1px white;
+  border-radius: 50%;
+}
+
+.container .component .comp_profile .profile_name p {
+  font-size: 18px;
+  color: #8bacda;
+}
+
+.container .component .comp_profile .profile_name p span {
+  color: white;
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
